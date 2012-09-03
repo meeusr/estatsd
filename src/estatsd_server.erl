@@ -101,7 +101,7 @@ terminate(_, _)             -> ok.
 %% INTERNAL STUFF
 
 send_to_graphite(Msg, State) ->
-    % io:format("SENDING: ~s\n", [Msg]),
+    io:format("SENDING: ~s\n", [Msg]),
     case gen_tcp:connect(State#state.graphite_host,
                          State#state.graphite_port,
                          [list, {packet, 0}]) of

@@ -1,10 +1,12 @@
 estatsd is a simple stats aggregation service that periodically dumps data to
 Graphite: http://graphite.wikidot.com/
 
-NB: Graphite is good, despite the website being a bit ghetto.
-
 Inspired heavily by etsy statsd:
 http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/
+
+UPDATE COMPARED TO ORIG VERSION
+===============================
+A udp server is added that listens a port for additional data. All data received from the UDP port, the local clients within the VM and the data about the VM itself are periodically dumped to Graphite.
 
 QUICK DEMO
 ==========
